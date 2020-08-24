@@ -11,19 +11,32 @@ public class CRUDOperations {
 	
 	public List<Blog> createBlog(Blog blog) throws IOException {
 		list.add(blog);
+		 System.out.println("after adding "+list);
 		return list;
 	}
 	
 	public List<Blog> viewBlog(Blog blog) throws IOException{
-		return null;
+		 System.out.println(list);
+		return list;
 		
 	}
 	public List<Blog> updateBlog(Blog blog) throws IOException{
-		return null;
+        list.set(list.indexOf(blog), blog);
+        System.out.println("after updating"+list);
+		return list;
 	
 	}
 	public List<Blog> deleteBlog(Blog blog) throws IOException{
-		return null;
+		 list.remove(blog);
+	    System.out.println("after remove "+list);
+		return list;
 		
 	}
+	
+	public List<Blog> addBlog(Blog blog){
+		list.add(blog);
+		return list;
+	}
+	
+
 }
